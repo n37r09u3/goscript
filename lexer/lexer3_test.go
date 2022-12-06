@@ -6,6 +6,7 @@ import (
 	"testing"
 )
 
+// 添加新的单字符词法单元
 func TestNextToken3(t *testing.T) {
 	input := `let five = 5;
 let ten = 10;
