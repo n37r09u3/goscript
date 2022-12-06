@@ -19,6 +19,7 @@ func main() {
 		panic(err)
 	}
 	if len(os.Args) == 2 {
+		//读取本地脚本
 		scriptName := os.Args[1]
 		readFile, err := os.Open(scriptName)
 		if err != nil {
@@ -42,6 +43,8 @@ func main() {
 		}
 
 	} else {
+		//进入repl shell
+		//let add = fn(x, y) { x + y; };
 		fmt.Printf("Hello %s! This is the Monkey programming language!\n",
 			user.Username)
 		fmt.Printf("Feel free to type in commands\n")
@@ -49,5 +52,3 @@ func main() {
 	}
 
 }
-
-//let add = fn(x, y) { x + y; };
