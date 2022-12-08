@@ -37,7 +37,7 @@ func (p *Parser) ParseProgram() *ast.Program {
 	for p.curToken.Type != token.EOF {
 		stmt := p.parseStatement()
 		if stmt != nil {
-			program.Statements = append(program.Statements, stmt)
+			program.Statements = append(program.Statements, stmt) //往接口切片里添加东西？
 		}
 		p.nextToken()
 	}
